@@ -2,6 +2,14 @@
 import Layout from '@/layouts/Layout.astro'
 ---
 
+<script>
+  const isCrab = new URLSearchParams(window.location.search).get('crab');
+  if (isCrab !== null) {
+    document.getElementById('crab')!.classList.remove('hidden');
+    document.getElementById('cards')!.classList.add('hidden');
+  }
+</script>
+
 <Layout>
   <div class="w-full px-4 pt-4 pb-8 max-w-200 mx-auto">
     <header>
@@ -9,8 +17,12 @@ import Layout from '@/layouts/Layout.astro'
       <h1>Your cozy club at Constructor University</h1>
     </header>
 
-    <object class="mt-20 -mx-2 md:-mx-6" type="image/svg+xml" data="/cards.svg"
-    ></object>
+    <img class="w-full mt-20 hidden" id="crab" src="/lays-crab.jpg" />
+    <object
+      id="cards"
+      class="mt-20 -mx-2 md:-mx-6"
+      type="image/svg+xml"
+      data="/cards.svg"></object>
 
     <!--
     <div class="mt-8 font-medium h-100">
@@ -38,7 +50,8 @@ import Layout from '@/layouts/Layout.astro'
 
     <section class="mt-20">
       <h2>Join our events</h2>
-      <iframe class="h-150 <sm:h-120" src="https://calendar.tea.university"></iframe>
+      <iframe class="h-150 <sm:h-120" src="https://calendar.tea.university"
+      ></iframe>
       <a
         href="https://event.tea.university"
         target="_blank"
@@ -62,7 +75,7 @@ import Layout from '@/layouts/Layout.astro'
         Student Activity Center Room 301
       </h2>
       <iframe
-      class="h-120"
+        class="h-120"
         src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d722.3426112123527!2d8.653924431738307!3d53.168001322224704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNTPCsDEwJzA1LjUiTiA4wrAzOScxNS4xIkU!5e0!3m2!1sen!2sde!4v1759530162573!5m2!1sen!2sde"
         allowfullscreen=""
         loading="lazy"
