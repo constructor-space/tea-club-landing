@@ -1,0 +1,149 @@
+---
+import Layout from '@/layouts/Layout.astro'
+---
+
+<Layout>
+  <div class="w-full px-4 pt-4 pb-8 max-w-200 mx-auto">
+    <header>
+      <img src="/logo.jpg" alt="Club logo" class="w-56 h-56 mx-auto" />
+      <h1>Your cozy club at Constructor University</h1>
+    </header>
+
+    <object class="mt-20 -mx-2 md:-mx-6" type="image/svg+xml" data="/cards.svg"
+    ></object>
+
+    <!--
+    <div class="mt-8 font-medium h-100">
+      <div class="card w-60%">
+        <div class="card-title bg-#3E9274 rotate-2.5" style="--offset: -15%">
+          <h2>☕️&nbsp;&nbsp;Drink tea</h2>
+        </div>
+        <img class="card-photo z-4 -rotate-13.5 top-1" src="/photo-shark.jpg" />
+      </div>
+
+      <div class="card top-3% left-45% w-60%">
+        <div class="card-title bg-#BA46D2 rotate-9" style="--offset: 22%">
+          <h2>☕️&nbsp;&nbsp;Discuss uni life</h2>
+        </div>
+        <img class="card-photo z-3 rotate-6 top-1 aspect-[4/3] object-cover" src="/photo-guitar.jpg" />
+      </div>
+
+      <div class="card top-3% top-35 -left-3% w-60%">
+        <div class="card-title bg-#5446D2 -rotate-5" style="--offset: 0%">
+          <h2>☕️&nbsp;&nbsp;Sing</h2>
+        </div>
+        <img class="card-photo z-1 rotate-3.5 top-1 aspect-[4/3] object-cover" src="/photo-guitar.jpg" />
+      </div>
+    </div> -->
+
+    <section class="mt-20">
+      <h2>Join our events</h2>
+      <iframe class="h-150 <sm:h-120" src="https://calendar.tea.university"></iframe>
+      <a
+        href="https://event.tea.university"
+        target="_blank"
+        class="btn bg-#35A37D text-white w-full mt-5"
+      >
+        Book your own event
+      </a>
+      <a
+        href="https://t.me/+xsM0KQjTyyk2YzQ6"
+        target="_blank"
+        class="btn bg-#3697C7 text-white w-full mt-5"
+      >
+        Join Telegram Chat
+      </a>
+    </section>
+
+    <section class="mt-20">
+      <h2>
+        <span class="text-black/75">Waiting for you in</span>
+        <br />
+        Student Activity Center Room 301
+      </h2>
+      <iframe
+      class="h-120"
+        src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d722.3426112123527!2d8.653924431738307!3d53.168001322224704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNTPCsDEwJzA1LjUiTiA4wrAzOScxNS4xIkU!5e0!3m2!1sen!2sde!4v1759530162573!5m2!1sen!2sde"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <section class="mt-20 text-center">
+      <span class="text-20pt">&lt;3</span>
+    </section>
+  </div>
+</Layout>
+
+<style lang="scss">
+  h1 {
+    font-size: 36pt;
+    letter-spacing: -0.04em;
+    line-height: 1em;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  section > h2 {
+    font-size: 24pt;
+    letter-spacing: -0.04em;
+    line-height: 1em;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .btn {
+    @apply relative inline-block px-8 py-4 rounded-2 text-center;
+    font-size: 18pt;
+    font-weight: 500;
+    overflow: hidden;
+
+    &::after {
+      @apply absolute inset-0 bg-black/0 transition;
+      content: '';
+    }
+
+    &:hover::after {
+      @apply bg-black/10;
+    }
+
+    &:active::after {
+      @apply bg-black/15;
+    }
+  }
+
+  iframe {
+    @apply mt-5 w-full rounded-2;
+  }
+
+  // .card {
+  //   position: relative;
+
+  //   .card-title {
+  //     position: absolute;
+  //     left: 50%;
+  //     transform: translateX(calc(-50% + var(--offset)));
+  //     width: max-content;
+
+  //     padding: 7px 12px;
+  //     color: white;
+  //     border: 2px solid white;
+  //     border-radius: 4px;
+
+  //     font-size: 20px;
+  //     line-height: 1em;
+  //     letter-spacing: -0.02em;
+  //     z-index: 10;
+  //     text-align: center;
+  //   }
+
+  //   .card-photo {
+  //     position: absolute;
+
+  //     border: 2px solid white;
+  //     border-radius: 6px;
+
+  //     background-position: center;
+  //   }
+  // }
+</style>
